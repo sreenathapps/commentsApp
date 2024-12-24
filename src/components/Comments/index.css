@@ -1,1 +1,48 @@
 /* Write your CSS here */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+.bg-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+.heading {
+  font-size: 2em;
+}
+.description {
+  font-size: 0.8em;
+}
+.name-input {
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin: 5px;
+  border: 1px solid #475569;
+}
+.image {
+  width: 40%;
+}
+.form-container {
+  display: flex;
+  padding: 3%;
+  flex-direction: column;
+}
+.submit-btn {
+  background-color: #0284c7;
+  color: white;
+  padding: 5px;
+  margin: 2%;
+  max-width: 140px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 5px;
+}
+.comments-list {
+  width: 90%;
+}
