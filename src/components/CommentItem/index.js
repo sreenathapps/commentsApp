@@ -43,7 +43,12 @@ const CommentItem = props => {
             Like
           </button>
         </div>
-        <button type="button" onClick={handleDelete} className="delete-btn">
+        <button
+          type="button"
+          data-testid="delete"
+          onClick={handleDelete}
+          className="delete-btn"
+        >
           <img
             className="delete-icon"
             alt="delete"
