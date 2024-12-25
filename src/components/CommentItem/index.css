@@ -42,39 +42,46 @@
   height: 25px;
   display: flex;
   color: white;
+  padding: 3%;
+  margin-right: 10px;
   justify-content: center;
   align-items: center;
   width: 25px;
 }
 .head-1 {
-  font-size: 20px;
+  display: inline;
+  font-size: 1.1em;
   margin-top: 0px;
+  font-weight: 700;
   margin-bottom: 0px;
 }
 
-.comment-1 {
-  font-size: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.cont-1 {
+cont-1 {
   display: flex;
   flex-direction: column;
-  height: 40px;
+  height: fit-content;
+  margin-bottom: 0px;
   min-width: 600px;
   flex-grow: 1;
 }
-last-line {
+.last-line {
   display: flex;
+  margin: 1em;
+  /* width: 800px; */
   justify-content: space-between;
-  align-content: center;
+  /* align-content: center; */
 }
 .like-icon {
   height: 20px;
+  margin-top: 3px;
 }
 .like-btn {
   background-color: transparent;
   border: none;
+  font-size: 1em;
+}
+.liked {
+  color: #0ea5e9;
 }
 .delete-btn {
   background-color: transparent;
@@ -83,4 +90,27 @@ last-line {
 .delete-icon {
   width: 20px;
   height: 20px;
+}
+.time-label {
+  color: #7e858e;
+  font-size: 0.8em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2em;
+}
+.time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  height: 2em;
+}
+comment-1 {
+  font-size: 1em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+hr.br {
+  width: -webkit-fill-available;
+  border-top: 2px solid #64748b;
 }

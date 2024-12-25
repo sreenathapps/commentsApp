@@ -36,13 +36,19 @@
 .submit-btn {
   background-color: #0284c7;
   color: white;
-  padding: 5px;
+  padding: 2.2%;
   margin: 2%;
   max-width: 140px;
+  min-width: 25px;
   font-size: 0.8em;
   border: none;
   border-radius: 5px;
 }
 .comments-list {
   width: 90%;
+}
+.comment-count {
+  display: flex;
+  font-size: 20px;
+  width: 82%;
 }

@@ -23,7 +23,10 @@ const CommentItem = props => {
         <div className="li-container">
           <div className={`circle ${bgColor}`}>{firstLetter}</div>
           <div className="cont-1">
-            <p className="head-1">{name}</p>
+            <div className="time">
+              <p className="head-1">{name}</p>
+              <p className="time-label">Less than a minute ago</p>
+            </div>
             <p className="comment-1">{comment}</p>
           </div>
         </div>
@@ -32,7 +35,11 @@ const CommentItem = props => {
       <div className="last-line">
         <div className="like">
           <img className="like-icon" alt="like" src={likeUrl} />
-          <button type="button" onClick={handleLikeButton} className="like-btn">
+          <button
+            type="button"
+            onClick={handleLikeButton}
+            className={`like-btn ${like ? 'liked' : ''}`}
+          >
             Like
           </button>
         </div>
@@ -44,6 +51,7 @@ const CommentItem = props => {
           />
         </button>
       </div>
+      <hr className="br" />
     </li>
   )
 }

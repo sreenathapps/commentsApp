@@ -34,7 +34,7 @@ class Comments extends Component {
 
     this.setState(prevState => {
       const {comments, name, comment} = prevState
-      const i = Math.floor(Math.random() * 8)
+      const i = Math.floor(Math.random() * 7)
       const newComment = {
         id: uuidv4(),
         name,
@@ -42,7 +42,13 @@ class Comments extends Component {
         bgColor: initialContainerBackgroundClassNames[i],
         like: false,
       }
-      return {comments: [...comments, newComment]}
+      return {
+        comments: [...comments, newComment],
+        name: ``,
+        comment: ``,
+        like: ``,
+        bgColor: ``,
+      }
     })
   }
 
@@ -67,6 +73,7 @@ class Comments extends Component {
 
   render() {
     const {name, comment, comments} = this.state
+    const count = comments.length
 
     return (
       <div className="bg-container">
@@ -77,12 +84,14 @@ class Comments extends Component {
             <input
               type="text"
               value={name}
+              placeholder="Your Name"
               onChange={this.onChangeName}
               className="name-input"
             />
             <textarea
               type="textarea"
               value={comment}
+              placeholder="Your Comment"
               onChange={this.onChangeComment}
               className="name-input"
             />
@@ -95,6 +104,10 @@ class Comments extends Component {
             alt="comments"
             src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
           />
+        </div>
+        <div className="comment-count">
+          <div className="submit-btn">{count}</div>
+          <p className="description">Comments</p>
         </div>
         <ul className="comments-list">
           {comments.map(each => (
